@@ -1,0 +1,73 @@
+.auth-gate {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.auth-card {
+  width: min(420px, 90vw);
+  background: rgba(9, 11, 25, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 28px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  box-shadow: 0 35px 80px rgba(3, 4, 12, 0.65);
+}
+
+.auth-card h1 {
+  margin: 0 0 0.5rem;
+  font-size: 1.5rem;
+}
+
+.auth-card p {
+  margin: 0;
+  color: #9aa0c8;
+}
+
+.github-btn {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #f5f6fb;
+  font-weight: 600;
+  padding: 0.85rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  cursor: pointer;
+}
+
+.github-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.divider {
+  position: relative;
+  margin: 1.5rem 0;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 30%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.divider::before {
+  left: 0;
+}
+
+.divider::after {
+  right: 0;
+}

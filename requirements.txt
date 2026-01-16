@@ -1,0 +1,11 @@
+sentence-transformers
+ollama
+faiss-cpu
+numpy
+llama-cpp-python
+ctransformers
+langchain
+pydantic
+uvicorn
+fastapi
+httpx

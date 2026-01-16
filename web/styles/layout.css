@@ -1,0 +1,135 @@
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem 3rem;
+}
+
+.app-main {
+  flex: 1;
+  width: 100%;
+  max-width: 1180px;
+  display: flex;
+  justify-content: center;
+}
+
+.workspace {
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.panel-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.stack-lg {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.stack-sm {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.chat-shell {
+  flex: 1;
+  height: clamp(520px, 68vh, 760px);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-radius: 26px;
+  padding: 1.5rem;
+  background: rgba(9, 10, 24, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 35px 70px rgba(2, 3, 7, 0.65);
+}
+
+.chat-shell .chat-window {
+  flex: 1;
+  min-height: 0;
+}
+
+.chat-context {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.25rem 1.5rem;
+  border-radius: 18px;
+  background: linear-gradient(120deg, rgba(88, 97, 247, 0.18), rgba(10, 12, 34, 0.65));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.chat-context.empty {
+  justify-content: center;
+  color: #9aa0cf;
+}
+
+.chat-context h2 {
+  margin: 0.25rem 0 0.35rem;
+  font-size: 1.35rem;
+}
+
+.repo-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.muted {
+  color: #9aa0cf;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.mono {
+  font-family: "IBM Plex Mono", "Space Grotesk", monospace;
+}
+
+.mono.small {
+  font-size: 0.85rem;
+  color: #b7c2ff;
+}
+
+.pill {
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+}
+
+.pill.success {
+  border-color: rgba(111, 255, 209, 0.7);
+  color: #6fffd1;
+}
+
+.pill.subtle {
+  border-color: rgba(255, 255, 255, 0.15);
+  color: #cfd6ff;
+}
+
+@media (max-width: 768px) {
+  .workspace {
+    min-height: auto;
+  }
+
+  .chat-shell {
+    padding: 1rem;
+  }
+
+  .chat-context {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Secrets
+*.env
+*.env.*
+*.secrets
+src/private/env.secrets
+
+# Node
+node_modules/
+.next/
+
+# OS
+.DS_Store
+Thumbs.db
+
+docs
+repos
+logs
+embeddings
