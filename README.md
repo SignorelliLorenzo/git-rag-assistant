@@ -1,4 +1,4 @@
-# git-rag-assistant
+# Git Rag Assistant
 
 Ask questions about a codebase with local RAG: fast retrieval, grounded answers, and a simple chat UI.
 
@@ -8,7 +8,7 @@ This runs **entirely on your own machine** (consumer-grade PC friendly):
 - Local vector search (FAISS)
 - Local LLM inference (default via Ollama)
 
-![git-rag-assistant UI](docs/assets/hero.png)
+![git-rag-assistant UI](images/hero.png)
 
 ## Why
 Reading a codebase is hard. Searching is not enough. You want:
@@ -22,7 +22,12 @@ Reading a codebase is hard. Searching is not enough. You want:
 - Chat: “Where is authentication handled?”
 - Get an answer grounded in the code + source snippets
 
-![Chat with sources](docs/assets/chat-with-sources.png)
+![Chat with sources](images/chat-with-sources.png)
+
+## Bring your repos securely
+- Sign in with GitHub (built-in OAuth) to list your repositories.
+- Choose one to clone locally—nothing leaves your machine.
+- Every repo lives under `repos/<repo_id>` on disk so indexing and retrieval stay local.
 
 ## What’s inside
 - **Next.js UI** (`web/`)

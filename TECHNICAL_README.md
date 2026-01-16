@@ -114,12 +114,22 @@ Per-repo model consistency:
 The navigator and the answer generator can be configured independently via the API payload.
 
 ## Configuration (environment variables)
+- `ENV_SECRETS_PATH`
+  - Location of the secrets file (default `src/private/env.secrets`).
+  - The file must define at least:
+    - `GITHUB_CLIENT_ID`
+    - `GITHUB_CLIENT_SECRET`
+    - `APP_BASE_URL` (defaults to `http://localhost:3000` if omitted)
+    - `API_BASE_URL` (defaults to `http://localhost:8000` if omitted)
+  - These values power the GitHub OAuth flow and the redirect URLs used by the web UI and API.
 - `RAG_EMBED_MAX_SEQ_LEN`
   - Caps SentenceTransformer `max_seq_length`.
   - Default: `512`.
   - Lower this if you see CPU/GPU OOM during embedding.
 - `RAG_LEGACY_EMBED_MODEL`
   - Fallback embedding model for older repos missing model metadata.
+- `RAG_LOG_LEVEL`, `RAG_LOG_DIR`, `RAG_LOG_FILE_NAME`, `RAG_LOG_MAX_BYTES`, `RAG_LOG_BACKUP_COUNT`
+  - Control structured logging (directory, filename, rotation behavior).
 
 ## Web UI behavior
 - The UI is intended to **index before allowing chat**.
